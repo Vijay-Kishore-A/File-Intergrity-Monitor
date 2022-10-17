@@ -3,8 +3,8 @@ import smtplib,hashlib
 filepath = input("Enter file path(eg. /home/desktop/important_files): ")
 
 def send_mail():
-    email = "rocketvk.18@gmail.com"
-    password = "mhfokccdfawwanhh"
+    email = "your-email@gmail.com"
+    password = "**********"
     server = smtplib.SMTP("smtp.gmail.com", 587)
     server.starttls()
     server.login(email, password)
@@ -20,8 +20,8 @@ def hash_encode(filepath):
         return sha256.hexdigest()
 
 baseline = hash_encode(filepath)
-print("[+] Just calculated your baseline")
-print("[+] Checking")
+print("calculated the baseline")
+print("script in progress.....")
 while True:
     check = hash_encode(filepath)
     if check != baseline:
